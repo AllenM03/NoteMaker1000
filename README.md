@@ -1,1 +1,1 @@
-# NoteMaker1000
+# QuickNoteGenerator
