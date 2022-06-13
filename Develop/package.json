@@ -1,14 +1,23 @@
 {
-  "name": "note-taker",
+  "name": "notemaker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllenM03/NoteMaker1000.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllenM03/NoteMaker1000/issues"
+  },
+  "homepage": "https://github.com/AllenM03/NoteMaker1000#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "inquirer": "^8.2.4"
   }
 }
