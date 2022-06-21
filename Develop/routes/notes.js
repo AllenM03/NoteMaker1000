@@ -36,8 +36,4 @@ notes.post("/", (req, res) => {
   }
 });
 
-// Add a DELETE Route for a specific note
-
-});
-
 module.exports = notes;
