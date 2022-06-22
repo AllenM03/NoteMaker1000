@@ -36,4 +36,14 @@ notes.post("/", (req, res) => {
   }
 });
 
+// DELETE Route for a specific note
+notes.delete("/:note_id", (req, res) => {
+  const noteId = req.params.note_id;
+  // Added a function in fsUtils.js to delete a specific Id from the given JSON file
+  if (noteId) {
+    deleteIdFromFile(noteId, "./db/db.json");
+    res.json("Note successfully deleted");
+  }
+});
+
 module.exports = notes;

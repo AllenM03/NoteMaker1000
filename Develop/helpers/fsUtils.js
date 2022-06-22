@@ -18,7 +18,7 @@ const writeToFile = (destination, content) =>
       } else {
         // if there's no error, convert JSON string to object
         const parsedData = JSON.parse(data);
-        // so that the added content can be pushed into the array
+
         parsedData.push(content);
         // store the newly created array to the given file
         writeToFile(file, parsedData);
