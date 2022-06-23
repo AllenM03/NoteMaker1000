@@ -12,7 +12,7 @@ const {
 // GET Route for retrieving all the notes
 notes.get("/", (req, res) => {
   // when user goes to /api/notes the application loads all available notes and displays it on the left of the page
-  readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
+  readFromFile("./db/db.json").then((data) => res.json(json.parse(data)));
 });
 
 // POST Route for a new note
