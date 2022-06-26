@@ -1,6 +1,6 @@
-const express = require("express");
-const path = require("path");
-const api = require("./routes/index.js");
+// const express = require("express");
+// const path = require("path");
+// const api = require("./routes/index.js");
 
 // use either environment PORT or 3001 (for testing)
 const PORT = process.env.PORT || 3001;
@@ -25,4 +25,38 @@ app.get("*", (req, res) =>
 
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT}`)
+});
+
+
+///////////////////////////////////////
+//////////////////Git branch develop start to troubleshoot server.js
+
+
+
+
+
+// Required modules
+const express = require("express");
+// const path = require("path");
+const fs = require("fs");
+const uuid = require("uuid");
+
+const app = express();
+
+const PORT = process.env.PORT || 3001;
+
+const notes = require("./db/db.json");
+
+////Parses
+
+//Parses incoming requests of string or array data
+app.use(express.urlencoded({ extended: true }));
+// Parses incoming JSON data
+app.use(express.json());
+// Uses public/ folder for Express
+app.use(express.static("public"));
+
+// GET Route for retrieving all saved notes and returning all saved notes as JSON. 
+app.get("/api/notes", (req, res) => {
+  res.json(notes);
 });
