@@ -17,11 +17,11 @@ const writeToFile = (destination, content) =>
         console.error(err);
       } else {
         // if there's no error, convert JSON string to object
-        const parsedData = JSON.parse(data);
+        // const parsedData = JSON.data;
 
-        parsedData.push(content);
+        // parsedData.push(content);
         // store the newly created array to the given file
-        writeToFile(file, parsedData);
+        // writeToFile(file, parsedData);
         console.info(`\nData added to ${file}`);
       }
     });
