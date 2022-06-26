@@ -9,6 +9,11 @@
 //   deleteIdFromFile,
 // } = require("../helpers/fsUtils");
 
+
+          /////////////////////////////////
+//////////    ADD TO server.js file      ///////////////
+          ////////////////////////////////
+
 // // GET Route for retrieving all the notes
 // notes.get("/", (req, res) => {
 //   // when user goes to /api/notes the application loads all available notes and displays it on the left of the page
@@ -35,6 +40,9 @@
 //     res.error("Error in adding note");
 //   }
 // });
+        /////^^^^^//////////////////^^^^^^^^^////////
+///////////    ADD to server.js file  /////////////
+        ///////////////////////////////
 
 // // DELETE Route for a specific note
 // notes.delete("/:note_id", (req, res) => {
