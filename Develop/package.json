@@ -1,7 +1,7 @@
 {
   "name": "notemaker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app to generate notes",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/AllenM03/NoteMaker1000.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Allen McBroom Bey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AllenM03/NoteMaker1000/issues"
@@ -22,5 +22,6 @@
     "express": "^4.18.1",
     "inquirer": "^8.2.4",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "devDependencies": {}
 }
