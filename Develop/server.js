@@ -35,19 +35,16 @@
 
 
 
-// Required modules
+/////// Required modules /////////
 const express = require("express");
 // const path = require("path");
 const fs = require("fs");
 const uuid = require("uuid");
-
 const app = express();
-
 const PORT = process.env.PORT || 3001;
-
 const notes = require("./db/db.json");
 
-////Parses
+///////// Parses ////////////
 
 //Parses incoming requests of string or array data
 app.use(express.urlencoded({ extended: true }));
@@ -56,14 +53,14 @@ app.use(express.json());
 // Middleware for using all files in the public folder
 app.use(express.static("public"));
 
-// GET Route for retrieving all saved notes and returning all saved notes as JSON. 
+///// GET Route for retrieving all saved notes and returning all saved notes as JSON. /////
 app.get("/api/notes", (req, res) => {
   res.json(notes);
 });
 
 
 
-// POST to receive a new note to
+////////// POST to receive a new note  //////////////
 
 app.post("/api/notes", (req, res) => {
   let newNote = req.body;
@@ -77,14 +74,14 @@ app.post("/api/notes", (req, res) => {
   res.json(notes);
 });
 
-////GET notes dir returns the notes.html file
+////////// GET notes dir returns the notes.html file //////////
 
 app.get("/notes", (req, res) => {
   res.sendFile(__dirname + "/public/notes.html");
 });
 
 
-// listens for console.log
+////////// listens for console.log //////////
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT}`)
 });
